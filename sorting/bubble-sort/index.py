@@ -1,5 +1,5 @@
 
-def bubbleSort(numbers):
+def bubbleSort(numbers: list[int]):
     
     # 1. 
     for index_i in range(len(numbers) - 1):
