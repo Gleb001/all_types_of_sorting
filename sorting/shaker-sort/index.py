@@ -1,5 +1,5 @@
 
-def shakerSort(numbers: list[int]):
+def ShakerSort(numbers: list[int]):
     
     if (len(numbers) == 0): return
 

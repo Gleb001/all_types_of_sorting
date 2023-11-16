@@ -1,6 +1,6 @@
 <?php
 
-    function bubbleSort(array $numbers) {
+    function BubbleSort(array $numbers) {
         
         for ($index_i = 0; $index_i < count($numbers); $index_i++) {
             for ($index_n = 0; $index_n < count($numbers) - 1 - $index_i; $index_n++) {

@@ -1,5 +1,5 @@
 
-function shakerSort(numbers) {
+function ShakerSort(numbers) {
     
     if (numbers.length == 0) return;
     

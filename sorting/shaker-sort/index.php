@@ -1,6 +1,6 @@
 <?php
 
-    function shakerSort(array $numbers) {
+    function ShakerSort(array $numbers) {
         
         if (count($numbers) == 0) return;
     
