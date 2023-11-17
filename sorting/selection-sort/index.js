@@ -20,7 +20,9 @@ function GetIndexMinElement(numbers, start, end) {
 function SelectionSort(numbers) {
     
     for (let index = 0; index < numbers.length; index++) {
+
         let index_min_element = GetIndexMinElement(numbers, index, numbers.length - 1);
+
         [
             numbers[index],
             numbers[index_min_element],
@@ -28,7 +30,7 @@ function SelectionSort(numbers) {
             numbers[index_min_element],
             numbers[index]
         ];
+        
     }
     
 }
-

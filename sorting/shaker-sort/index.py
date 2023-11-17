@@ -19,3 +19,4 @@ def ShakerSort(numbers: list[int]):
                 numbers[index], numbers[index - 1] = numbers[index - 1], numbers[index]
             
         left += 1
+    

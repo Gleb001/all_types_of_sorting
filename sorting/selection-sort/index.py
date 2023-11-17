@@ -16,8 +16,10 @@ def GetIndexMinElement(numbers: list[int], start: int, end: int) -> int:
 # Основная функция | main
 def SelectionSort(numbers: list[int]):
     
-    for index in range(len(numbers)):                           
+    for index in range(len(numbers)):                    
+               
         index_min_element = GetIndexMinElement(numbers, index, len(numbers))
+
         (
             numbers[index],
             numbers[index_min_element]
@@ -26,6 +28,3 @@ def SelectionSort(numbers: list[int]):
             numbers[index]
         )
         
-
-
-    

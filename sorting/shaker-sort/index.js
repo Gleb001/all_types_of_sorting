@@ -1,4 +1,16 @@
 
+// Вспомогательные функции | helpers
+function Swap(numbers, index_1, index_2) {
+    [
+        numbers[index_1],
+        numbers[index_2]
+    ] = [
+        numbers[index_2],
+        numbers[index_1]
+    ];
+}
+
+// Основная функция | main
 function ShakerSort(numbers) {
     
     if (numbers.length == 0) return;
@@ -10,7 +22,7 @@ function ShakerSort(numbers) {
         
         for (let index = left; index < right; index++) {
             if (numbers[index] > numbers[index + 1]) {
-                [numbers[index], numbers[index + 1]] = [numbers[index + 1], numbers[index]];
+                Swap(numbers, index, index + 1);
             }
         }
 
@@ -18,7 +30,7 @@ function ShakerSort(numbers) {
         
         for (let index = right; index > left; index--) {
             if (numbers[index - 1] > numbers[index]) {
-                [numbers[index], numbers[index - 1]] = [numbers[index - 1], numbers[index]];
+                Swap(numbers, index - 1, index);
             }
         }
 

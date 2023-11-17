@@ -1,4 +1,12 @@
 
+// Вспомогательные функции | helpers
+void Swap(int[] numbers, int index_1, int index_2) {
+    int temp = numbers[index_1];
+    numbers[index_1] = numbers[index_2];
+    numbers[index_2] = temp;
+}
+
+// Основная функция | main
 void ShakerSort(int[] numbers) {
 
     if (numbers.Length == 0) return;
@@ -10,9 +18,7 @@ void ShakerSort(int[] numbers) {
             
         for (int index = left; index < right; index++) {
             if (numbers[index] > numbers[index + 1]) {
-                int temp = numbers[index];
-                numbers[index] = numbers[index + 1];
-                numbers[index + 1] = temp;
+                Swap(numbers, index, index + 1);
             }
         }
             
@@ -20,9 +26,7 @@ void ShakerSort(int[] numbers) {
 
         for (int index = right; index > left; index--) {
             if (numbers[index - 1] > numbers[index]) {
-                int temp = numbers[index];
-                numbers[index] = numbers[index - 1];
-                numbers[index - 1] = temp;
+                Swap(numbers, index - 1, index);
             }
         }
             
