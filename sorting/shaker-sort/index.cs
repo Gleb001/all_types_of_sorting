@@ -1,37 +1,33 @@
 
-public class ShakerSort {
+void ShakerSort(int[] numbers) {
 
-    public static void Sort(int[] numbers) {
-
-        if (numbers.Length == 0) return;
+    if (numbers.Length == 0) return;
         
-        int left = 0;
-        int right = numbers.Length - 1;
+    int left = 0;
+    int right = numbers.Length - 1;
         
-        while (left <= right) {
+    while (left <= right) {
             
-            for (int index = left; index < right; index++) {
-                if (numbers[index] > numbers[index + 1]) {
-                    int temp = numbers[index];
-                    numbers[index] = numbers[index + 1];
-                    numbers[index + 1] = temp;
-                }
+        for (int index = left; index < right; index++) {
+            if (numbers[index] > numbers[index + 1]) {
+                int temp = numbers[index];
+                numbers[index] = numbers[index + 1];
+                numbers[index + 1] = temp;
             }
-            
-            right--;
-
-            for (int index = right; index > left; index--) {
-                if (numbers[index - 1] > numbers[index]) {
-                    int temp = numbers[index];
-                    numbers[index] = numbers[index - 1];
-                    numbers[index - 1] = temp;
-                }
-            }
-            
-            left++;
-            
         }
+            
+        right--;
 
+        for (int index = right; index > left; index--) {
+            if (numbers[index - 1] > numbers[index]) {
+                int temp = numbers[index];
+                numbers[index] = numbers[index - 1];
+                numbers[index - 1] = temp;
+            }
+        }
+            
+        left++;
+            
     }
 
 }
